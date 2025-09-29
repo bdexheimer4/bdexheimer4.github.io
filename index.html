@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="stylepage.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resources.html">Resources</a>
+        <a href="tech-hero.html">Tech Hero</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1>Hi, we're [Ben Dexheimer and Jack Horbach]</h1>
+      <p>Welcome to my site. Use the links above to see my About page, a student-friendly guide to implicit bias and intersectionality, and my Tech Hero profile.</p>
+      <a class="btn" href="about.html">Start with About</a>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> [Ben Dexheimer and Jack Horbach]
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
