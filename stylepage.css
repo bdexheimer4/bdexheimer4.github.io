@@ -182,3 +182,13 @@ section a:hover{
 
 /* ---------- Small Helpers ---------- */
 strong{ color: var(--ink); }
+/* ---------- Hero Image ---------- */
+.hero-img {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  margin: 1rem auto;
+}
