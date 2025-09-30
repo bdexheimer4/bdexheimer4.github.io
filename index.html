@@ -4,11 +4,14 @@
   <meta charset="utf-8" />
   <title>Welcome • Our Site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="stylepage.css" />
+  <!-- Global stylesheet for all pages (per assignment: no inline CSS) -->
+  <link rel="stylesheet" href="stylepage.css?v=2" />
+  <!-- Page purpose: Splash/landing page with first impression + primary nav -->
 </head>
 <body>
   <header class="site-header">
     <div class="container">
+      <!-- Global navigation: if you add/remove pages, update links here -->
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
@@ -18,8 +21,10 @@
     </div>
   </header>
 
-  <main class="container">
+  <!-- Main content anchor for accessibility (target for skip links if added) -->
+  <main id="main" class="container">
     <section>
+      <!-- Hero/intro section -->
       <h1>Hi, we’re Ben Dexheimer and Jack Horbach</h1>
       <p>We created this site together to share our work, explain implicit bias and intersectionality for first-year students, and highlight a tech leader who inspires us.</p>
       <a class="btn" href="about.html">Start with About Us</a>
@@ -27,8 +32,11 @@
   </main>
 
   <footer>
+    <!-- Footer auto-updates year via small inline script below -->
     © <span id="y"></span> Ben Dexheimer & Jack Horbach
   </footer>
+
+  <!-- Tiny helper script: sets the current year; no visual impact -->
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
