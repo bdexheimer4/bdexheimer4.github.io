@@ -1,14 +1,17 @@
-o<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <title>About Us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Shared styles for consistent look & accessibility across pages -->
   <link rel="stylesheet" href="stylepage.css?v=2" />
+  <!-- Page purpose: Convert Project #1 info into a web “About Us” page -->
 </head>
 <body>
   <header class="site-header">
     <div class="container">
+      <!-- Site-wide nav -->
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
@@ -18,35 +21,41 @@ o<!DOCTYPE html>
     </div>
   </header>
 
-  <main class="container">
+  <!-- Main content container -->
+  <main id="main" class="container">
     <section>
+      <!-- Section intro: who we are and what’s below -->
       <h1>About Us</h1>
       <p>We’re Ben Dexheimer and Jack Horbach. This site is part of our course project. Below you’ll find short intros, what we’re working on, and the skills we share.</p>
     </section>
 
+    <!-- Two-column layout for each person (handled by CSS .grid-2) -->
     <section class="grid-2">
       <div>
+        <!-- Person 1 card -->
         <h2>About Ben</h2>
         <p><strong>Major/Focus:</strong> Personal Finance</p>
-        <p><strong>What I Care About:</strong> I enjoy numbers in my finance classes, but overall I want to manage peoples money in the future. That is my passion.</p>
+        <p><strong>What I Care About:</strong> Making data-driven decisions that center people and ethics.</p>
         <h3>Current Projects</h3>
         <ul>
-          <li>Project #2, building this website</li>
-          <li>Board and Brush clientele in a different class</li>
+          <li>Dream Vacation Survey — analyzing student travel preferences</li>
+          <li>Implicit Bias Resources — building a first-year friendly guide</li>
         </ul>
       </div>
       <div>
+        <!-- Person 2 card -->
         <h2>About Jack</h2>
         <p><strong>Major/Focus:</strong> Personal Finance</p>
-        <p><strong>What I Care About:</strong> I want to be in the finance world, but find the opportunities of coding fascinating.</p>
+        <p><strong>What I Care About:</strong> Designing tools that improve access and reduce bias.</p>
         <h3>Current Projects</h3>
         <ul>
-          <li>Building this website, which has been so much fun </li>
-          <li>Researching our tech hero as a group</li>
+          <li>Tech Hero Profile — highlighting Kimberly Bryant</li>
+          <li>Class Website — designing this site with HTML and CSS</li>
         </ul>
       </div>
     </section>
 
+    <!-- Shared skills section (edit as needed) -->
     <section>
       <h2>Shared Skills</h2>
       <ul>
@@ -54,12 +63,15 @@ o<!DOCTYPE html>
         <li>HTML/CSS and simple JS</li>
         <li>Presentation design and teamwork</li>
       </ul>
+      <!-- Note: keep language first-year friendly per audience requirement -->
     </section>
   </main>
 
   <footer>
+    <!-- Footer remains consistent across pages -->
     © <span id="y"></span> Ben Dexheimer & Jack Horbach
   </footer>
+  <!-- Utility: sets current year automatically -->
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
