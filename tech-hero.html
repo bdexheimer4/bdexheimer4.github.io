@@ -4,11 +4,14 @@
   <meta charset="utf-8" />
   <title>Tech Hero</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- One shared stylesheet across the site -->
   <link rel="stylesheet" href="stylepage.css?v=2" />
+  <!-- Page purpose: ≤500 word profile + links for a tech leader advancing equity -->
 </head>
 <body>
   <header class="site-header">
     <div class="container">
+      <!-- Global nav (consistent placement) -->
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
@@ -18,14 +21,17 @@
     </div>
   </header>
 
-  <main class="container">
+  <main id="main" class="container">
+    <!-- Profile card -->
     <section>
       <h1>Tech Hero: Kimberly Bryant</h1>
 
-     <img src="Kimberly.jpeg"
-     alt="Kimberly Bryant, founder of Black Girls CODE"
-     class="hero-img">
+      <!-- Local image (uploaded to repo root as Kimberly.jpeg); styled by .hero-img -->
+      <img src="Kimberly.jpeg"
+           alt="Kimberly Bryant, founder of Black Girls CODE"
+           class="hero-img">
 
+      <!-- Four short sections keep total word count under 500 -->
       <p><strong>Why we chose this person:</strong> We picked Kimberly Bryant because she saw a problem in tech — the lack of opportunities for young women of color — and decided to do something about it.</p>
 
       <p><strong>What they do:</strong> Kimberly Bryant is an electrical engineer who started Black Girls CODE in 2011. The organization offers coding workshops, hackathons, and mentorship for girls of color, preparing them for careers in STEM.</p>
@@ -35,19 +41,23 @@
       <p><strong>What we learned:</strong> Learning about Kimberly Bryant showed us that leadership in tech can mean creating opportunities for others. She built a solution that helps entire communities. This inspires us to think about how our own ideas could create access and fairness.</p>
     </section>
 
+    <!-- Source links for credibility and further reading -->
     <section>
       <h2>Links</h2>
       <ul>
         <li><a href="https://www.blackgirlscode.com/" target="_blank">Black Girls CODE Official Website</a></li>
         <li><a href="https://www.forbes.com/profile/kimberly-bryant/" target="_blank">Forbes Profile</a></li>
         <li><a href="https://en.wikipedia.org/wiki/Kimberly_Bryant_(engineer)" target="_blank">Wikipedia</a></li>
+        <!-- Optional: add a talk/interview link here -->
       </ul>
     </section>
   </main>
 
   <footer>
+    <!-- Shared footer; year set by script -->
     © <span id="y"></span> Ben Dexheimer & Jack Horbach
   </footer>
+  <!-- Tiny helper: current year -->
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
