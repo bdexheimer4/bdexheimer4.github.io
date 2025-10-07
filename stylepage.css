@@ -228,3 +228,13 @@ strong{ color: var(--ink); }
   text-align: center;
   padding: 40px 20px;
 }
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto 15px;
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
