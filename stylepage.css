@@ -191,28 +191,6 @@ strong{ color: var(--ink); }
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   margin: 1rem auto;
 }
-.hero {
-  background-image: url("Learning Picture.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
 
 .hero .overlay {
   position: relative;
@@ -235,4 +213,18 @@ strong{ color: var(--ink); }
 .btn:hover {
   background-color: #9b040a;
 }
+/* New homepage image styling */
+.homepage-image {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
+/* Center the intro text */
+.intro {
+  text-align: center;
+  padding: 40px 20px;
+}
