@@ -81,6 +81,55 @@ allowfullscreen></iframe>
       examples for each class using our own faces, then exported the model to
       TensorFlow.js so it could run directly in the browser on this page.
     </p>
+    <h2>Project Statement</h2>
+<p>
+For this project, Jack and I had to create our own machine learning model using Google’s Teachable Machine. I decided to make an emotion classifier that shows three facial expressions, those being neutral, smiling, and frustrated. I show the working model on my webpage along with a demo video and an explanation of how I built everything. While doing this, I was also reading Joy Buolamwini’s <i>Unmasking AI</i>, which helped me understand how bias, fairness, and representation show up in even simple projects like the one we have created.
+</p>
+
+<p>
+I made an image classifier that reads your face through the webcam and tries to guess which of the three emotions you’re making. To train it, I recorded about 300 short video clips for each emotion, so I had around 900 samples total. Although I had 300 short video clips, the videos were only about 10 seconds long each. Throughout this, I kept the expressions realistic and not cartoon-like. For example, “frustrated” wasn’t me screaming—it was how people actually look when they’re annoyed: slight frown, tight lips, and raised eyebrows. I also changed my lighting, angle, and distance from the camera so the model wouldn’t only learn one very specific version of my face. After I recorded the clips, Teachable Machine automatically turned the videos into hundreds of image frames and trained a model from them. When it was done, I exported it to run in TensorFlow.js and added it directly into my website. Now, anyone can click “Start Webcam & Model” and watch the classifier run live in the browser.
+</p>
+
+<p>
+The model works better than I expected for something I made on my laptop. “Neutral” and “frustrated” are the easiest for it to get right. “Smiling” is harder, mostly because smiling can look close to neutral if the expression is too subtle. Another challenge we faced was the small changes in lighting or angle. If the lighting is too dark or too bright, the model sometimes gets confused. The project helped me understand something important: machines are not actually “smart.” They just recognize patterns in the data and code that you give them. If the data changes even slightly, accuracy can drop fast. This is exactly the kind of thing Joy Buolamwini talks about in <i>Unmasking AI</i>. Bias and mistakes can come from the data the machine learned on, and not because the machine is evil or because it chose to be unfair.
+</p>
+
+<p>
+While building the model, I kept noticing connections to Joy Buolamwini’s book. Even though I made something small and harmless, the same issues she writes about showed up immediately. This is one of the biggest messages in Joy’s book. Training data decides what the machine can or cannot do. In her experience, commercial facial-recognition systems weren’t trained well on darker-skinned people, especially darker-skinned women, so the systems performed badly and created real harm. In my case, I only trained my model on my own face, which means that it works best on me, it might struggle on people who look different, it might misread certain expressions, and it could completely fail on darker lighting, different skin tones, facial hair, glasses, etc.
+</p>
+
+<p>
+Even though my project isn’t being used in the real world, it shows how easy it is to accidentally create bias. I didn’t try to exclude anyone, but because my data only included myself, the model ended up being biased toward my features. That’s exactly what Joy talked about and how AI reflects whatever data it is fed, whether fair or not.
+</p>
+
+<p>
+Next, Joy talks about how dangerous it is when algorithms label people incorrectly, especially when it comes to race, gender, or appearance. Many systems place people into categories that they never agreed to or never knew existed. In my project, we decided what “frustrated,” “smiling,” and “neutral” looked like. The machine just copied my versions of those emotions. But another person’s “frustrated” face might look totally different. In real life, emotion-recognition technology has been shown to misidentify people from different cultures or backgrounds.
+</p>
+
+<p>
+This helped me realize that creating categories in AI isn’t neutral. Someone always decides the labels, and the machine then “enforces” those labels on everyone else, even when they don’t fit. That’s a big problem Joy highlights in facial analysis systems, where algorithms have decided things about people without their involvement.
+</p>
+
+<p>
+Furthermore, Teachable Machine is extremely simple. Anyone can drag in data, click a button, and train a model in minutes. This accessibility is a good thing for learning, but it also makes it easy for people to create biased or inaccurate AI without realizing it. Joy warned us about this issue, and people trust AI tools because they look impressive, not because they’re actually fair or accurate. Someone who doesn’t understand AI might overtrust a model just because it has a high accuracy score on the training data. But that doesn’t mean it’s fair. My project made me see how these “easy” tools can accidentally spread bad technology if people aren’t careful. For example, my model is confident even when it’s wrong, it might mislabel other people’s emotions, it’s trained on one face, so it’s not fair to everyone, and lighting, angle, or skin tone can change results dramatically. Creating a model is the easy part, but creating a fair model is what can be difficult.
+</p>
+
+<p>
+My next point is about how Joy talks a lot about being mindful of your own identity, position, and power when you build AI systems. Even though my project is small, it made me realize how much of myself accidentally goes into the model. Some examples of this are my face structure, my lighting, my expressions, and even my perspective on what “counts” as an emotion. Without thinking about it, I made an AI that works well for people like me and not really for others. That’s the same logic behind biased commercial systems—developers train on what’s easy and familiar, and the result doesn’t include everyone. This project taught me that AI designers must constantly check themselves. Even simple systems need thoughtful design and diverse data.
+</p>
+
+<p>
+Overall, building this teachable machine helped me understand AI in a much deeper way. Instead of just reading about bias, I got to see how it happens step by step throughout this entire project. I learned how easy it is to create a model that performs well for one person but not so much for others. I learned how labels and categories reflect the choices of the designer, and not for everyone. And I learned how important it is to think about fairness from the very beginning. Doing this at the same time as reading <i>Unmasking AI</i> made everything more real. Joy Buolamwini’s experiences showed how unfair systems can hurt real people. My little project was harmless, but it helped me understand how those big problems start. They start with training data, with assumptions, and with a lack of awareness. Even a small emotion classifier like mine can reproduce bias without actually meaning to. This project definitely changed how I think about AI. I now see how important it is to design responsibly, test fairly, include diverse data, and question what the machine is actually learning. AI isn’t neutral, and this project helped me understand why.
+</p>
+
+<h3>Group Members</h3>
+<p>Ben Dexheimer and Jack Horbach</p>
+
+<h3>GitHub Repository</h3>
+<p>
+<a href="https://github.com/bdexheimer4/bdexheimer4.github.io" target="_blank">
+Click here to view our code</a>
+</p>
   </main>
 
   <!-- Teachable Machine + TensorFlow scripts -->
