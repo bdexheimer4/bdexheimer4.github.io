@@ -242,3 +242,31 @@ strong{ color: var(--ink); }
   object-position: center top;
   transform: scale(1.1);
 }
+/* --- Teachable Machine page layout --- */
+
+.tm-main {
+  max-width: 900px;
+  margin: 2rem auto 3rem;
+  padding: 1.5rem 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* spacing for webcam + label output */
+#webcam-container,
+#label-container {
+  margin-top: 1rem;
+}
+
+#label-container div {
+  margin-bottom: 0.25rem;
+}
+
+/* button styling just for TM page */
+.tm-main button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
