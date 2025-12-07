@@ -27,8 +27,48 @@
       (for example: neutral, smiling, and frustrated).
     </p>
 
-    <button type="button" onclick="init()">Start Webcam &amp; Model</button>
+<h2>Training Dataset Overview</h2>
+<p>Here is a summary of the images and examples we used to train the model:</p>
 
+<table style="width:100%; border-collapse: collapse; margin-bottom: 1.5rem;">
+  <tr style="background:#f5f5f5;">
+    <th style="padding:8px; border:1px solid #ccc;">Class</th>
+    <th style="padding:8px; border:1px solid #ccc;">Number of Samples</th>
+    <th style="padding:8px; border:1px solid #ccc;">Notes</th>
+  </tr>
+  <tr>
+    <td style="padding:8px; border:1px solid #ccc;">Neutral</td>
+    <td style="padding:8px; border:1px solid #ccc;">~300</td>
+    <td style="padding:8px; border:1px solid #ccc;">Normal relaxed face, no smile.</td>
+  </tr>
+  <tr>
+    <td style="padding:8px; border:1px solid #ccc;">Smiling</td>
+    <td style="padding:8px; border:1px solid #ccc;">~300</td>
+    <td style="padding:8px; border:1px solid #ccc;">Regular smile, not exaggerated.</td>
+  </tr>
+  <tr>
+    <td style="padding:8px; border:1px solid #ccc;">Frustrated</td>
+    <td style="padding:8px; border:1px solid #ccc;">~300</td>
+    <td style="padding:8px; border:1px solid #ccc;">Frown / annoyed facial expression.</td>
+  </tr>
+</table>
+
+<button type="button" onclick="init()">Start Webcam &amp; Model</button>
+<h3>How to Interpret the Prediction Scores</h3>
+<p>
+  When the model is running, it will display a score between <strong>0 and 1</strong> for each class 
+  (Neutral, Smiling, and Frustrated) on every frame. These values represent how confident the model is 
+  about what emotion it is seeing.
+</p>
+<ul>
+  <li><strong>Scores closer to 1.0</strong> = higher confidence.</li>
+  <li><strong>Scores around 0.33 for all three</strong> = the model is unsure or guessing.</li>
+  <li>The model's “prediction” is whichever class has the <strong>highest score</strong>.</li>
+</ul>
+<p>
+  For example, if the model outputs:
+  <em>Neutral: 0.82, Smiling: 0.10, Frustrated: 0.08</em>, it is predicting "Neutral" with high confidence.
+</p>
     <div id="webcam-container"></div>
     <div id="label-container"></div>
 <h2>Demo Video</h2>
