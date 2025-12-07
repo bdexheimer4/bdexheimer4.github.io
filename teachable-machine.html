@@ -100,7 +100,38 @@ The model works better than I expected for something I made on my laptop. “Neu
 <p>
 While building the model, I kept noticing connections to Joy Buolamwini’s book. Even though I made something small and harmless, the same issues she writes about showed up immediately. This is one of the biggest messages in Joy’s book. Training data decides what the machine can or cannot do. In her experience, commercial facial-recognition systems weren’t trained well on darker-skinned people, especially darker-skinned women, so the systems performed badly and created real harm. In my case, I only trained my model on my own face, which means that it works best on me, it might struggle on people who look different, it might misread certain expressions, and it could completely fail on darker lighting, different skin tones, facial hair, glasses, etc.
 </p>
+<h2>Reflection: Bias, Accuracy, and What I Learned</h2>
 
+<p>
+  Training the model only on my own face introduced a clear bias into the system. When other people 
+  tested it, the accuracy dropped, especially for classmates who had different skin tones, facial 
+  features, hairstyles, or wore glasses. This showed how limited a model becomes when its training 
+  data only represents one type of person.
+</p>
+
+<p>
+  I also noticed that the model changed its predictions depending on the lighting and camera angle. 
+  In bright lighting facing the camera head-on, the confidence scores were much higher. But in dim 
+  lighting, side lighting, or when I moved farther back, the model became less reliable and often 
+  guessed incorrectly. This connects to issues discussed in <em>Unmasking AI</em>, where small 
+  environmental changes cause big drops in accuracy for many real-world systems.
+</p>
+
+<p>
+  Another factor was how subjective my labels were. I decided what “frustrated,” “neutral,” and 
+  “smiling” looked like, which means the model learned my personal interpretation of those emotions. 
+  Someone from a different cultural or emotional background might express those feelings differently. 
+  This ties into class discussions about representation and intersectionality, and how AI systems 
+  often fail when they are trained on limited or one-dimensional examples.
+</p>
+
+<p>
+  Overall, building this model showed me how easily bias enters AI systems, even in small projects. 
+  To make a more accurate and fair model, I would need a much more diverse dataset and more testing 
+  across lighting, angles, and different people. This helped me understand why ethical and inclusive 
+  training practices matter.
+</p>
+   
 <p>
 Even though my project isn’t being used in the real world, it shows how easy it is to accidentally create bias. I didn’t try to exclude anyone, but because my data only included myself, the model ended up being biased toward my features. That’s exactly what Joy talked about and how AI reflects whatever data it is fed, whether fair or not.
 </p>
